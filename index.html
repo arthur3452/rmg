@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Regular Math Game</title>
+		<link rel="icon" href="icon.png"></link>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+            body {
+	           background-color: #fce00a;
+	           font-family: Roboto Mono;
+	           display: flex;
+	           align-items: center;
+	           justify-content: center;
+	           flex-direction: column;
+            }
+			h3 { 
+			 text-align: center;
+			 font-weight: 400;
+			}
+			 .buttons button {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fc420a;
+    color: white;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    min-height: 50px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+  }
+    .buttons button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Align with the bottom of the button */
+    width: 100%;
+    height: 6px; /* Thinner bottom face going upwards */
+    background-color: #d63609; /* Slightly darker bottom face */
+    border-radius: 0 0 5px 5px;
+    transform-origin: top;
+    transform: perspective(100px) rotateX(-40deg); /* Adjust angle and perspective */
+    z-index: -2; /* Place it behind the button */
+  }
+
+  .buttons button:hover {
+    background-color: #bf3208;
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .buttons button:active {
+    transform: translateY(2px); /* Main button moves down */
+  }
+		</style>
+	</head>
+	<body>
+		<h1>Regular Math Game</h1>
+		<h3>A regular JavaScript game where<br>you need to solve math questions<br>within a canvas for you<br>to solve the operation<br>by drawing in it then<br>entering the result in the input,<br>and clicking the done button.</h3>
+		<div class="buttons">
+		 <button onclick="window.location.href='https://arthur3452.github.io/rmg/game/index.html'">Play!</button>
+		</div>
+		<div class="otherbuttons">
+			<a href="https://www.scratch.mit.edu/users/athurrrrrr">Scratch</a>
+			<a href="https://github.com/arthur3452">Github</a>
+			<a href="https://www.youtube.com/@ArthurFelipePalandi">Youtube</a>
+		</div>
+	</body>
+</html>	
